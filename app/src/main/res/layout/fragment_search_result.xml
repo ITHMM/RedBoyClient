@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@id/category_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/head_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/header_back_selecter"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@id/categoryTitle"
+            style="@style/style_18_BEBEBE_BOLD"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="搜索结果" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_search_sort"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_sale"
+            android:text="销量"
+            style="@style/search_result_sort" />
+
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/rb_price"
+            style="@style/search_result_sort"
+            android:text="价格降序"
+             />
+        <RadioButton
+            android:id="@+id/rb_time"
+            style="@style/search_result_sort"
+            android:text="价格升序"/>
+        <RadioButton
+            android:id="@+id/rb_comment"
+            android:text="好评度"
+            style="@style/search_result_sort" />
+
+
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/lv_search_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+</LinearLayout>

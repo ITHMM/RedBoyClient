@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_brand"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_listview"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/head_bg">
+
+        <TextView
+            android:id="@+id/tv_head_brand"
+            style="@style/style_18_BEBEBE_BOLD"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="推荐品牌" />
+
+        <TextView
+            android:id="@+id/tv_head_title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/header_back_selecter"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+    <ListView
+
+        android:id="@+id/lvBrand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#CCC"></ListView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/background_pic" />
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/home_backgroud">
+
+    <FrameLayout
+        android:id="@+id/fl_prom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/category_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/head_bg">
+
+            <TextView
+                android:id="@id/textTitle"
+                style="@style/style_18_BEBEBE_BOLD"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/prom_bulletin" />
+
+            <TextView
+                android:id="@+id/headerBackBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/header_back_selecter"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_alignParentBottom="true"
+            android:animationCache="false"></RelativeLayout>
+
+        <ListView
+            android:layout_marginTop="40dp"
+            android:id="@id/promBulldtinLv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bottomBar"
+            android:layout_below="@id/category_layout"
+            android:layout_marginBottom="50.0dip"
+            android:cacheColorHint="#00000000"
+            android:fadingEdge="none" />
+    </FrameLayout>
+
+    <include
+        android:id="@id/bottomBar"
+        layout="@layout/bottombar" />
+</RelativeLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_backgroud"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/shopcar_title_rel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/head_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/shopcar_update_text"
+            style="@style/style_15_EBEBEB_BOLD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@anim/head_button"
+            android:gravity="center"
+            android:text="编 辑"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/shopcar_title_text"
+            style="@style/style_18_BEBEBE_BOLD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="购物车" />
+
+        <TextView
+            android:id="@+id/shopcar_toPay_text"
+            style="@style/style_15_EBEBEB_BOLD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@anim/head_button_greytored"
+            android:gravity="center"
+            android:text="去结算"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/shopcar_default_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/shopcar"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/shopcar_null_text"
+            style="@style/style_20_666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shopcar_default_img"
+            android:layout_centerHorizontal="true"
+            android:text="您的购物车中没有商品"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/shopcar_toBuy_text"
+            style="@style/style_17_FFFFFF_BOLD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shopcar_null_text"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:background="@anim/button_long"
+            android:gravity="center"
+            android:text="去  逛  逛"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_cart_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/shopcar_title_rel"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_cart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/rl_cart_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#802f4f4f"
+            android:gravity="center_vertical"
+
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp"
+            android:visibility="visible">
+
+            <CheckBox
+                android:id="@+id/checkbox_all"
+                style="@style/customCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:checked="true"
+                android:text="全选" />
+
+            <TextView
+                android:id="@+id/txt_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:layout_toRightOf="@+id/checkbox_all"
+                android:text="合计"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/btn_order"
+                style="@style/bigRedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:minHeight="60dp"
+                android:minWidth="120dp"
+                android:text="去结算" />
+
+            <Button
+                android:id="@+id/btn_del"
+                style="@style/bigRedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:minHeight="60dp"
+                android:minWidth="120dp"
+                android:text="删除"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_volley" default="compile.module.volley">
+  <dirname property="module.volley.basedir" file="${ant.file.module_volley}"/>
+  
+  <property name="module.jdk.home.volley" value="${jdk.home.android_api_22_platform}"/>
+  <property name="module.jdk.bin.volley" value="${jdk.bin.android_api_22_platform}"/>
+  <property name="module.jdk.classpath.volley" value="jdk.classpath.android_api_22_platform"/>
+  
+  <property name="compiler.args.volley" value="-encoding UTF-8 -source 1.7 -target 1.7 ${compiler.args}"/>
+  
+  <property name="volley.output.dir" value="${module.volley.basedir}/build/intermediates/classes/debug"/>
+  <property name="volley.testoutput.dir" value="${module.volley.basedir}/build/intermediates/classes/test/debug"/>
+  
+  <path id="volley.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="volley.module.production.classpath">
+    <path refid="${module.jdk.classpath.volley}"/>
+  </path>
+  
+  <path id="volley.runtime.production.module.classpath">
+    <pathelement location="${volley.output.dir}"/>
+  </path>
+  
+  <path id="volley.module.classpath">
+    <path refid="${module.jdk.classpath.volley}"/>
+    <pathelement location="${volley.output.dir}"/>
+    <path refid="library.shadows-core-3.0.classpath"/>
+    <path refid="library.asm-5.0.1.classpath"/>
+    <path refid="library.robolectric-utils-3.0.classpath"/>
+    <path refid="library.asm-commons-5.0.1.classpath"/>
+    <path refid="library.vtd-xml-2.11.classpath"/>
+    <path refid="library.junit-4.10.classpath"/>
+    <path refid="library.asm-tree-5.0.1.classpath"/>
+    <path refid="library.hamcrest-core-1.1.classpath"/>
+    <path refid="library.asm-analysis-5.0.1.classpath"/>
+    <path refid="library.mockito-core-1.9.5.classpath"/>
+    <path refid="library.icu4j-53.1.classpath"/>
+    <path refid="library.ant-1.8.0.classpath"/>
+    <path refid="library.accessibility-test-framework-1.0.classpath"/>
+    <path refid="library.ant-launcher-1.8.0.classpath"/>
+    <path refid="library.robolectric-3.0.classpath"/>
+    <path refid="library.bcprov-jdk16-1.46.classpath"/>
+    <path refid="library.objenesis-1.0.classpath"/>
+    <path refid="library.asm-util-5.0.1.classpath"/>
+    <path refid="library.sqlite4java-0.282.classpath"/>
+    <path refid="library.maven-ant-tasks-2.1.3.classpath"/>
+    <path refid="library.robolectric-resources-3.0.classpath"/>
+    <path refid="library.robolectric-annotations-3.0.classpath"/>
+  </path>
+  
+  <path id="volley.runtime.module.classpath">
+    <pathelement location="${volley.testoutput.dir}"/>
+    <pathelement location="${volley.output.dir}"/>
+    <path refid="library.shadows-core-3.0.classpath"/>
+    <path refid="library.asm-5.0.1.classpath"/>
+    <path refid="library.robolectric-utils-3.0.classpath"/>
+    <path refid="library.asm-commons-5.0.1.classpath"/>
+    <path refid="library.vtd-xml-2.11.classpath"/>
+    <path refid="library.junit-4.10.classpath"/>
+    <path refid="library.asm-tree-5.0.1.classpath"/>
+    <path refid="library.hamcrest-core-1.1.classpath"/>
+    <path refid="library.asm-analysis-5.0.1.classpath"/>
+    <path refid="library.mockito-core-1.9.5.classpath"/>
+    <path refid="library.icu4j-53.1.classpath"/>
+    <path refid="library.ant-1.8.0.classpath"/>
+    <path refid="library.accessibility-test-framework-1.0.classpath"/>
+    <path refid="library.ant-launcher-1.8.0.classpath"/>
+    <path refid="library.robolectric-3.0.classpath"/>
+    <path refid="library.bcprov-jdk16-1.46.classpath"/>
+    <path refid="library.objenesis-1.0.classpath"/>
+    <path refid="library.asm-util-5.0.1.classpath"/>
+    <path refid="library.sqlite4java-0.282.classpath"/>
+    <path refid="library.maven-ant-tasks-2.1.3.classpath"/>
+    <path refid="library.robolectric-resources-3.0.classpath"/>
+    <path refid="library.robolectric-annotations-3.0.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.volley">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.volley">
+    <patternset refid="excluded.from.module.volley"/>
+  </patternset>
+  
+  <path id="volley.module.sourcepath">
+    <dirset dir="${module.volley.basedir}">
+      <include name="build/generated/source/r/debug"/>
+      <include name="build/generated/source/aidl/debug"/>
+      <include name="build/generated/source/buildConfig/debug"/>
+      <include name="build/generated/source/rs/debug"/>
+      <include name="build/generated/res/rs/debug"/>
+      <include name="src/main/java"/>
+    </dirset>
+  </path>
+  
+  <path id="volley.module.test.sourcepath">
+    <dirset dir="${module.volley.basedir}">
+      <include name="build/generated/source/r/androidTest/debug"/>
+      <include name="build/generated/source/aidl/androidTest/debug"/>
+      <include name="build/generated/source/buildConfig/androidTest/debug"/>
+      <include name="build/generated/source/rs/androidTest/debug"/>
+      <include name="build/generated/res/rs/androidTest/debug"/>
+      <include name="src/test/resources"/>
+      <include name="src/test/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.volley" depends="compile.module.volley.production,compile.module.volley.tests" description="Compile module volley"/>
+  
+  <target name="compile.module.volley.production" depends="register.custom.compilers" description="Compile module volley; production classes">
+    <mkdir dir="${volley.output.dir}"/>
+    <javac2 destdir="${volley.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.volley}/javac">
+      <compilerarg line="${compiler.args.volley}"/>
+      <bootclasspath refid="volley.module.bootclasspath"/>
+      <classpath refid="volley.module.production.classpath"/>
+      <src refid="volley.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.volley"/>
+    </javac2>
+    
+    <copy todir="${volley.output.dir}">
+      <fileset dir="${module.volley.basedir}/build/generated/source/r/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.volley.basedir}/build/generated/source/aidl/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.volley.basedir}/build/generated/source/buildConfig/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.volley.basedir}/build/generated/source/rs/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.volley.basedir}/build/generated/res/rs/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.volley.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.volley.tests" depends="register.custom.compilers,compile.module.volley.production" description="compile module volley; test classes" unless="skip.tests">
+    <mkdir dir="${volley.testoutput.dir}"/>
+    <javac2 destdir="${volley.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.volley}/javac">
+      <compilerarg line="${compiler.args.volley}"/>
+      <bootclasspath refid="volley.module.bootclasspath"/>
+      <classpath refid="volley.module.classpath"/>
+      <src refid="volley.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.volley"/>
+    </javac2>
+    
+    <copy todir="${volley.testoutput.dir}">
+      <fileset dir="${module.volley.basedir}/build/generated/source/r/androidTest/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.volley.basedir}/build/generated/source/aidl/androidTest/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.volley.basedir}/build/generated/source/buildConfig/androidTest/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.volley.basedir}/build/generated/source/rs/androidTest/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.volley.basedir}/build/generated/res/rs/androidTest/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.volley.basedir}/src/test/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.volley.basedir}/src/test/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.volley" description="cleanup module">
+    <delete dir="${volley.output.dir}"/>
+    <delete dir="${volley.testoutput.dir}"/>
+  </target>
+</project>

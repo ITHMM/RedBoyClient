@@ -1,0 +1,56 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.0'
+    }
+
+}
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+dependencies {
+    apply plugin: 'project-report'
+    apply plugin: 'announce'
+    apply plugin: 'application'
+    compile project(':app')
+    compile project(':devpkg-android')
+    compile project(':volley')
+}
+//DELETE THIS LINES:
+//android {
+//   compileSdkVersion 23
+//   buildToolsVersion '23.0.3'
+//}
+apply plugin: 'build-announcements'
+apply plugin: 'application'
+
+//apply plugin: 'announce'
+//apply plugin: 'antlr'
+//apply plugin: 'checkstyle'
+//apply plugin: 'codenarc'
+//apply plugin: 'ear'
+//apply plugin: 'eclipse'
+//apply plugin: 'eclipse-wtp'
+//apply plugin: 'findbugs'
+//apply plugin: 'groovy'
+//apply plugin: 'idea'
+//apply plugin: 'java'
+//apply plugin: 'jdepend'
+//apply plugin: 'jetty'
+//apply plugin: 'maven'
+//apply plugin: 'osgi'
+//apply plugin: 'pmd'
+//apply plugin: 'project-report'
+//apply plugin: 'scala'
+//apply plugin: 'signing'
+//apply plugin: 'sonar'
+//apply plugin: 'war'

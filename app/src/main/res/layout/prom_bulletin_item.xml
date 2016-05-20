@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    android:background="@drawable/background_pic">
+
+    <TextView
+        android:gravity="center"
+        android:background="@drawable/background_listview"
+        android:text="艹之,屎都被你吃的涨价了"
+        android:id="@+id/textContent"
+        style="@style/style_16_666666_BOLD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+     	android:paddingBottom="10.0dip"  
+     	android:paddingTop="10.0dip" 
+     	android:paddingLeft="10.0dip" 
+        android:layout_gravity="center" />
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:src="@drawable/about"
+        android:id="@+id/imgIcon"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true" 
+        android:layout_below="@id/textContent"/>
+
+</RelativeLayout>

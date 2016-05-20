@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/search_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/product_01" />
+
+    <TextView
+        android:id="@+id/search_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/search_icon"
+        android:singleLine="true"
+        android:text="电视里看见换个方式的和分公司领导发话更是放过"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/search_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_title"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/search_icon"
+        android:singleLine="true"
+        android:text="￥801"
+        android:textColor="#F00"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/rl_search_marketprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_title"
+        android:layout_toRightOf="@id/search_price">
+
+        <TextView
+            android:id="@+id/search_marketprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="￥1001"
+            android:textColor="#9000"
+            android:textSize="20sp" />
+        <View
+            android:layout_marginTop="12dp"
+            android:background="#000"
+            android:layout_width="80dp"
+            android:layout_height="1dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/search_comment_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_price"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@id/search_icon"
+        android:singleLine="true"
+        android:text="已有345人评论"
+        android:textColor="#9000"
+        android:textSize="20sp" />
+</RelativeLayout>

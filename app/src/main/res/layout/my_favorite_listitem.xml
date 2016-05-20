@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+
+        android:layout_width="82.0dip"
+        android:layout_height="82.0dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="5.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="5.0dip" >
+
+
+        <ImageView
+            android:id="@+id/myfavorite_product_img"
+           android:src="@drawable/about"
+            android:layout_width="80.0dip"
+            android:layout_height="60.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="15.0dip"
+            android:scaleType="fitCenter" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="5.0dip"
+        android:paddingRight="10.0dip" >
+
+        <TextView
+            android:id="@+id/myfavorite_title_text"
+            android:text="title"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="4.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="14.0sp" />
+
+        <TextView
+            android:id="@+id/myfavorite_price_text"
+            android:text="@string/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myfavorite_title_text"
+            android:textStyle=""
+            android:layout_marginBottom="3.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:textSize="14.0sp" />
+
+        <TextView
+            android:id="@+id/myfavorite_nostock_text"
+            android:text="nostock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myfavorite_price_text"
+            android:textColor="@color/red"
+            android:layout_marginBottom="3.0dip"
+            android:layout_marginLeft="10.0dip"
+             />
+        <TextView
+            android:layout_width="8.0dip"
+            android:layout_height="13.0dip"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/arrow" />
+
+    </RelativeLayout>
+</LinearLayout>
+
+        <LinearLayout
+            android:id="@id/linLine"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_marginTop="3.0dip"
+            android:background="@drawable/line"
+            android:orientation="horizontal" />
+
+
+
+
+
+</LinearLayout>

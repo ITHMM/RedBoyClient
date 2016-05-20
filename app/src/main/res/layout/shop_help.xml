@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@id/fraHead"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/head_bg">
+                <TextView
+                    style="@style/style_18_BEBEBE_BOLD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="购物指南" />
+                <TextView
+                    android:id="@id/backTv"
+                    style="@style/style_15_EBEBEB_BOLD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@anim/head_back"
+                    android:gravity="center"
+                    android:text="返回" />
+
+
+            </FrameLayout>
+
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1、问：在这里购物，能保证我的系统安全吗？"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:paddingTop="20dp"
+                    android:text="     答：我们为使用者提供安全无虑、便利舒适的购物环境，特別采用SSL电子安全机制，以及与网络银行等级相同的128bit伺服器数位凭证来提高网站的安全性。所谓 SSL，是 Secure Socket Layer 的缩写，这是由 Netscape 研发出来的网络讯息加密技术。当您输入您的重要资料时，所有的数据均会经过复杂的加密程序，您的所有个人资料由此便受到层层的保护。 同时防止他人未经授权使用您的密码或进入您的计算机也是非常重要的。因此，您应确保在与他人共用一台计算机时，使用完毕后即时退出登录。 此外，关于你的个人资料，妈妈嗨网都将严格遵守各项法律规定，绝不会泄露给非业务相关的第三者。自此，请您安心地享受购物乐趣。"
+                    android:textColor="@color/blackcolor"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="25dp"
+                    android:text="2、问：签收商品是需要注意什么？"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:paddingTop="20dp"
+                    android:text="     答：当您在收到订购的商品时，请仔细核对订购的商品种类、数量、规格以及相应的赠品，确认无误后，货到付款订单在付款后，请在送货单上签字。签字后请妥善保管您的购物凭证。若有质疑，可以立即向配送人员提出退货，我们会根据情况给予处理。如果您当场签收，我们视同为您认可商品完整无缺。而您当场签收有明显损坏迹象的外包装后再投诉货物有误或有损坏，恕我们不能受理。非本地库房配送的订单，不支持部分拒收及部分退货。"
+                    android:textColor="@color/blackcolor"
+                    android:textSize="16dp" />
+            </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+</LinearLayout>

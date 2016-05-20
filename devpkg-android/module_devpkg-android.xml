@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_devpkg-android" default="compile.module.devpkg-android">
+  <dirname property="module.devpkg-android.basedir" file="${ant.file.module_devpkg-android}"/>
+  
+  <property name="module.jdk.home.devpkg-android" value="${jdk.home.android_api_21_platform}"/>
+  <property name="module.jdk.bin.devpkg-android" value="${jdk.bin.android_api_21_platform}"/>
+  <property name="module.jdk.classpath.devpkg-android" value="jdk.classpath.android_api_21_platform"/>
+  
+  <property name="compiler.args.devpkg-android" value="-encoding UTF-8 -source 1.7 -target 1.7 ${compiler.args}"/>
+  
+  <property name="devpkg-android.output.dir" value="${module.devpkg-android.basedir}/build/intermediates/classes/debug"/>
+  <property name="devpkg-android.testoutput.dir" value="${module.devpkg-android.basedir}/build/intermediates/classes/test/debug"/>
+  
+  <path id="devpkg-android.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="devpkg-android.module.production.classpath">
+    <path refid="${module.jdk.classpath.devpkg-android}"/>
+  </path>
+  
+  <path id="devpkg-android.runtime.production.module.classpath">
+    <pathelement location="${devpkg-android.output.dir}"/>
+  </path>
+  
+  <path id="devpkg-android.module.classpath">
+    <path refid="${module.jdk.classpath.devpkg-android}"/>
+    <pathelement location="${devpkg-android.output.dir}"/>
+  </path>
+  
+  <path id="devpkg-android.runtime.module.classpath">
+    <pathelement location="${devpkg-android.testoutput.dir}"/>
+    <pathelement location="${devpkg-android.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.devpkg-android">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.devpkg-android">
+    <patternset refid="excluded.from.module.devpkg-android"/>
+  </patternset>
+  
+  <path id="devpkg-android.module.sourcepath">
+    <dirset dir="${module.devpkg-android.basedir}">
+      <include name="build/generated/source/r/debug"/>
+      <include name="build/generated/source/aidl/debug"/>
+      <include name="build/generated/source/buildConfig/debug"/>
+      <include name="build/generated/source/rs/debug"/>
+      <include name="build/generated/res/rs/debug"/>
+      <include name="src/main/res"/>
+      <include name="src/main/java"/>
+    </dirset>
+  </path>
+  
+  <path id="devpkg-android.module.test.sourcepath">
+    <dirset dir="${module.devpkg-android.basedir}">
+      <include name="build/generated/source/r/androidTest/debug"/>
+      <include name="build/generated/source/aidl/androidTest/debug"/>
+      <include name="build/generated/source/buildConfig/androidTest/debug"/>
+      <include name="build/generated/source/rs/androidTest/debug"/>
+      <include name="build/generated/res/rs/androidTest/debug"/>
+      <include name="src/androidTest/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.devpkg-android" depends="compile.module.devpkg-android.production,compile.module.devpkg-android.tests" description="Compile module devpkg-android"/>
+  
+  <target name="compile.module.devpkg-android.production" depends="register.custom.compilers" description="Compile module devpkg-android; production classes">
+    <mkdir dir="${devpkg-android.output.dir}"/>
+    <javac2 destdir="${devpkg-android.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.devpkg-android}/javac">
+      <compilerarg line="${compiler.args.devpkg-android}"/>
+      <bootclasspath refid="devpkg-android.module.bootclasspath"/>
+      <classpath refid="devpkg-android.module.production.classpath"/>
+      <src refid="devpkg-android.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.devpkg-android"/>
+    </javac2>
+    
+    <copy todir="${devpkg-android.output.dir}">
+      <fileset dir="${module.devpkg-android.basedir}/build/generated/source/r/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.devpkg-android.basedir}/build/generated/source/aidl/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.devpkg-android.basedir}/build/generated/source/buildConfig/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.devpkg-android.basedir}/build/generated/source/rs/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.devpkg-android.basedir}/build/generated/res/rs/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.devpkg-android.basedir}/src/main/res">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.devpkg-android.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.devpkg-android.tests" depends="register.custom.compilers,compile.module.devpkg-android.production" description="compile module devpkg-android; test classes" unless="skip.tests">
+    <mkdir dir="${devpkg-android.testoutput.dir}"/>
+    <javac2 destdir="${devpkg-android.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.devpkg-android}/javac">
+      <compilerarg line="${compiler.args.devpkg-android}"/>
+      <bootclasspath refid="devpkg-android.module.bootclasspath"/>
+      <classpath refid="devpkg-android.module.classpath"/>
+      <src refid="devpkg-android.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.devpkg-android"/>
+    </javac2>
+    
+    <copy todir="${devpkg-android.testoutput.dir}">
+      <fileset dir="${module.devpkg-android.basedir}/build/generated/source/r/androidTest/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.devpkg-android.basedir}/build/generated/source/aidl/androidTest/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.devpkg-android.basedir}/build/generated/source/buildConfig/androidTest/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.devpkg-android.basedir}/build/generated/source/rs/androidTest/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.devpkg-android.basedir}/build/generated/res/rs/androidTest/debug">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.devpkg-android.basedir}/src/androidTest/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.devpkg-android" description="cleanup module">
+    <delete dir="${devpkg-android.output.dir}"/>
+    <delete dir="${devpkg-android.testoutput.dir}"/>
+  </target>
+</project>

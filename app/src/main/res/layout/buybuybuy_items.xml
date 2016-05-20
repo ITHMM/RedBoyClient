@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="5.0dip"
+    android:paddingTop="5.0dip"
+    android:background="#ccc"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/buybuybuy_to_goodsdetail">
+    <RelativeLayout
+        android:id="@+id/buybuybuyrelImage"
+        android:layout_width="82.0dip"
+        android:layout_height="82.0dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10.0dip" >
+
+        <ImageView
+            android:id="@+id/buybuybuyPicIv"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_marginLeft="1.0dip"
+            android:layout_marginTop="1.0dip"
+            android:src="@drawable/product_loading" />
+
+        <ImageView
+            android:id="@+id/buybuybuyloadingIv"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_marginLeft="1.0dip"
+            android:layout_marginTop="1.0dip"
+            android:src="@drawable/product_loading"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_80" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/buybuybuy_nameTV"
+            android:layout_width="wrap_content"
+            style="@style/style_15_666666_BOLD"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="15dip"
+            android:text="帮一惊顺理夼"
+             />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="2dip" >
+
+            <TextView
+                android:id="@+id/buybuybuy_priceTV"
+                android:layout_width="160dip"
+                android:layout_height="wrap_content"
+                android:text="Y100.00"
+                style="@style/style_15_666666_BOLD" />
+		<ImageView
+                android:layout_width="160dip"
+                android:layout_height="1dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:src="@drawable/limit_line" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginTop="5dip"
+                android:text="会员特价:"
+                style="@style/style_15_666666_BOLD" />
+
+            <TextView
+                android:id="@+id/buybuybuyprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="5dip"
+                android:text="Y88.00"
+                 android:textColor="@color/red"
+                    android:textSize="16sp"  />
+        </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_buybuybuy"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:background="@drawable/product_detail_shop_selecter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="6dip"
+                    android:layout_marginTop="2dip"
+                    android:text="加入购物车"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

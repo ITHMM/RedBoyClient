@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:onClick="insert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="增"
+        android:textSize="22sp" />
+
+    <Button
+        android:onClick="delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删"
+        android:textSize="22sp" />
+
+    <Button
+        android:onClick="update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="改"
+        android:textSize="22sp" />
+
+    <Button
+        android:onClick="queryAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查所有"
+        android:textSize="22sp" />
+
+    <Button
+        android:onClick="query"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查单个"
+        android:textSize="22sp" />
+
+</LinearLayout>

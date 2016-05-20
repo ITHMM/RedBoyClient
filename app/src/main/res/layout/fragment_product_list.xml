@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_product_list"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@id/category_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/head_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_back"
+            style="@style/style_15_EBEBEB_BOLD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/header_back_selecter"
+            android:gravity="center"
+            android:text="返 回"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_18_BEBEBE_BOLD"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="商品列表"/>
+
+        <TextView
+            android:id="@+id/tv_sift"
+            style="@style/style_15_EBEBEB_BOLD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/header_back_selecter_right"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="筛 选"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_product_list"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_sale"
+            style="@style/search_result_sort"
+            android:text="销 量"/>
+
+        <RadioButton
+            android:id="@+id/rb_price"
+            style="@style/search_result_sort"
+            android:checked="true"
+            android:text="价 格"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_rankgood"
+            style="@style/search_result_sort"
+            android:text="好评度"/>
+
+        <RadioButton
+            android:id="@+id/rb_ranktime"
+            style="@style/search_result_sort"
+            android:text="上架时间"/>
+
+
+    </RadioGroup>
+
+    <ListView
+        android:background="#FFF"
+        android:id="@+id/lv_product_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+</LinearLayout>

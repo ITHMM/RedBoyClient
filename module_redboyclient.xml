@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_redboyclient" default="compile.module.redboyclient">
+  <dirname property="module.redboyclient.basedir" file="${ant.file.module_redboyclient}"/>
+  
+  <property name="module.jdk.home.redboyclient" value="${jdk.home.1.7}"/>
+  <property name="module.jdk.bin.redboyclient" value="${jdk.bin.1.7}"/>
+  <property name="module.jdk.classpath.redboyclient" value="jdk.classpath.1.7"/>
+  
+  <property name="compiler.args.redboyclient" value="-encoding UTF-8 -source 1.7 -target 1.7 ${compiler.args}"/>
+  
+  <property name="redboyclient.output.dir" value="${module.redboyclient.basedir}/build/classes/main"/>
+  <property name="redboyclient.testoutput.dir" value="${module.redboyclient.basedir}/build/classes/test"/>
+  
+  <path id="redboyclient.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="redboyclient.module.production.classpath">
+    <path refid="${module.jdk.classpath.redboyclient}"/>
+  </path>
+  
+  <path id="redboyclient.runtime.production.module.classpath">
+    <pathelement location="${redboyclient.output.dir}"/>
+  </path>
+  
+  <path id="redboyclient.module.classpath">
+    <path refid="${module.jdk.classpath.redboyclient}"/>
+    <pathelement location="${redboyclient.output.dir}"/>
+  </path>
+  
+  <path id="redboyclient.runtime.module.classpath">
+    <pathelement location="${redboyclient.testoutput.dir}"/>
+    <pathelement location="${redboyclient.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.redboyclient">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.redboyclient">
+    <patternset refid="excluded.from.module.redboyclient"/>
+  </patternset>
+  
+  
+  <target name="compile.module.redboyclient" depends="compile.module.redboyclient.production,compile.module.redboyclient.tests" description="Compile module RedBoyClient"/>
+  
+  <target name="compile.module.redboyclient.production" depends="register.custom.compilers" description="Compile module RedBoyClient; production classes"/>
+  
+  <target name="compile.module.redboyclient.tests" depends="register.custom.compilers,compile.module.redboyclient.production" description="compile module RedBoyClient; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.redboyclient" description="cleanup module">
+    <delete dir="${redboyclient.output.dir}"/>
+    <delete dir="${redboyclient.testoutput.dir}"/>
+  </target>
+</project>

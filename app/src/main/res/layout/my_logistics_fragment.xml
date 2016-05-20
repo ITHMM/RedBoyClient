@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/home_backgroud">
+
+    <FrameLayout
+        android:id="@id/fraHead"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/head_bg">
+        <TextView
+            android:id="@id/textTitle"
+            style="@style/style_18_BEBEBE_BOLD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="物流查询" />
+
+        <TextView
+            android:id="@+id/head_back_text"
+            style="@style/style_15_EBEBEB_BOLD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@anim/head_button"
+            android:gravity="center"
+            android:text="订单详情" />
+    </FrameLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@anim/shape_rounded_rectangle"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8.0dip">
+
+                    <TextView
+                        android:textColor="#000"
+                        android:id="@id/textAdressKey1"
+                        style="@style/style_14_9F9F9F_BOLD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="发货方式：" />
+
+                    <TextView
+                        android:layout_marginLeft="80dp"
+                        android:id="@id/textAdress1"
+                        style="@style/style_14_666666_BOLD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:maxWidth="200.0dip"
+                        android:text="快递" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8.0dip">
+
+                    <TextView
+                        android:textColor="#000"
+                        android:id="@id/textAdressKey2"
+                        style="@style/style_14_9F9F9F_BOLD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="物流编号：" />
+
+                    <TextView
+                        android:layout_marginLeft="80dp"
+                        android:id="@id/textAdress2"
+                        style="@style/style_14_666666_BOLD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:maxWidth="200.0dip"
+                        android:text="KKLI2324342424242" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8.0dip">
+
+                    <TextView
+                        android:textColor="#000"
+                        android:id="@id/textAdressKey3"
+                        style="@style/style_14_9F9F9F_BOLD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center"
+                        android:text="物流公司：" />
+
+                    <TextView
+                        android:id="@id/textAdress3"
+                        style="@style/style_14_666666_BOLD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:gravity="right"
+                        android:maxWidth="200.0dip"
+                        android:text="顺丰" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8.0dip">
+
+                    <TextView
+                        android:textColor="#000"
+                        android:id="@id/textAdressKey4"
+                        style="@style/style_14_9F9F9F_BOLD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="运单号码：" />
+
+                    <TextView
+                        android:id="@id/textAdress4"
+                        style="@style/style_14_666666_BOLD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:gravity="right"
+                        android:maxWidth="200.0dip"
+                        android:text="904227013066" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/line" />
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8.0dip">
+
+                    <TextView
+                        android:textColor="#000"
+                        android:id="@id/textAdressKey4"
+                        style="@style/style_14_9F9F9F_BOLD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="物流跟踪：" />
+
+                    <TextView
+                        android:id="@id/textAdress4"
+                        style="@style/style_14_666666_BOLD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:gravity="right"
+                        android:text="以下信息由物流公司提供，如有疑问请" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8.0dip">
+                    <TextView
+                        android:id="@id/textAdressKey4"
+                        style="@style/style_14_666666_BOLD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="查询顺丰快递官方网站" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:textColor="#000"
+                android:textSize="18sp"
+                style="@style/style_15_666666_BOLD"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:text="物流跟踪" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginBottom="10.0dp"
+        android:layout_marginTop="4dp"
+        android:background="@anim/shape_rounded_rectangle"
+        android:orientation="vertical">
+        <TextView
+            style="@style/style_14_666666_BOLD"
+            android:padding="5dp"
+            android:text="
+2016-02-23 星期二\n
+    09:30:28 已签收，感谢您使用顺丰，期待再为您服务。\n
+    08:05:41 正在派送途中,请您准备签收\n
+    07:50:41 快件到达【哈尔滨双福服务点】\n
+2016-02-22 星期一\n
+    22:49:27 快件在【哈尔滨哈平集散中心】，正转运至下一站\n
+    21:32:01 快件到达【哈尔滨哈平集散中心】\n
+    21:19:42 快件在【哈尔滨哈安集散中心】，正转运至下一站\n
+    21:18:50 快件到达【哈尔滨哈安集散中心】\n
+    04:29:05 快件在【沈阳浑南新区集散中心】，正转运至下一站\n
+    01:09:55 快件到达【沈阳浑南新区集散中心】\n
+2016-02-20 星期六\n
+    05:06:51 快件在【广州总集散中心】，正转运至下一站\n
+    05:06:51 快件到达【广州总集散中心】\n
+2016-02-19 星期五\n
+    21:00:23 快件在【汕头龙湖集散中心】，正转运至下一站\n
+    20:40:21 快件到达【汕头龙湖集散中心】\n
+    19:05:27 快件在【汕头莲下服务点】，正转运至下一站\n
+    18:24:23 顺丰已收件
+"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

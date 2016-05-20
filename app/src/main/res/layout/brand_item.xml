@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_division"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/negative_button_pressed"
+            android:padding="5dp"
+            android:text="专区"
+            android:textColor="#c63232"
+            android:textSize="18sp" />
+
+        <GridView
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:gravity="center"
+            android:id="@+id/gv_division"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnWidth="90dp"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:horizontalSpacing="5dp"
+            android:verticalSpacing="5dp"></GridView>
+        <!--android:numColumns="auto_fit" 列数设置为自动-->
+        <!--android:columnWidth="90dp"，每列的宽度，也就是Item的宽度-->
+        <!--android:stretchMode="columnWidth"缩放与列宽大小同步-->
+        <!--android:verticalSpacing="10dp"垂直边距-->
+        <!--android:horizontalSpacing="10dp"水平边距-->
+
+    </LinearLayout>
+
+
+</LinearLayout>
